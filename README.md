@@ -1,18 +1,43 @@
 # Coworking-Service 
 
-Консольное приложение для управления коворкинг-пространством.
+Console application for managing a coworking space
 
-## Функциональные возможности
+## Functional features
 
-- Регистрация и авторизация пользователя
-- Просмотр доступных рабочих мест и конференц-залов
-- Бронирование рабочего места или конференц-зала на определённое время и дату
-- Отмена бронирования
-- Управление бронированиями и ресурсами
-- Просмотр всех бронирований и их фильтрация
+- User registration and authorization
+- View available workplaces and conference rooms
+- Booking a workplace or conference room for a specific time and date
+- Cancellation of the reservation
+- Manage bookings and resources
+- View all bookings and filter them
 
-## Запуск
+## How to Build and Run
 
-1. Выполните клонирование репозитория;
-2. Выполните build проекта `mvn clean install`
-3. Запустите приложение `mvn exec: java -Dexec.mainClass = "com.ylab.Main`
+1. Clone the repository;
+2. Build the project using Maven: `mvn clean install`
+3. Run the application: `mvn exec: java -Dexec.mainClass = "com.ylab.Main`
+
+## Usage
+
+### Login Menu
+
+1. Login
+2. Register
+3. Exit
+
+### Main Menu
+
+1. View available workspaces
+2. View available conference rooms
+3. Book a workspace
+4. Book a conference room
+5. Cancel a booking
+6. View all bookings
+7. Add new workspace
+8. Add new conference room
+9. Update workspace
+10. Update conference room
+11. Delete workspace
+12. Delete conference room
+13. Filter bookings
+14. Logout
