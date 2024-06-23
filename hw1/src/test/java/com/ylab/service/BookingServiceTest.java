@@ -1,6 +1,7 @@
 package com.ylab.service;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -20,6 +21,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test adding booking")
     public void testAddBooking() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);
@@ -29,6 +31,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test adding conflict booking")
     public void testAddBookingConflict() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);
@@ -40,6 +43,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test cancel booking")
     public void testCancelBooking() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);
@@ -50,6 +54,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test filter bookings by date")
     public void testFilterBookingsByDate() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);
@@ -59,6 +64,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test filter bookings by user")
     public void testFilterBookingsByUser() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);
@@ -68,6 +74,7 @@ public class BookingServiceTest {
     }
 
     @Test
+    @DisplayName("Test filter bookings by resource")
     public void testFilterBookingsByResource() {
         LocalDateTime startTime = LocalDateTime.of(2023, 1, 1, 10, 0);
         LocalDateTime endTime = LocalDateTime.of(2023, 1, 1, 12, 0);

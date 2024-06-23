@@ -3,6 +3,7 @@ package com.ylab.service;
 import com.ylab.model.ConferenceRoom;
 import com.ylab.model.Workspace;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,6 +20,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test adding workspace")
     public void testAddWorkspace() {
         resourceService.addWorkspace("Workspace One");
         Workspace workspace = resourceService.getWorkspace(1);
@@ -28,6 +30,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test adding conference room")
     public void testAddConferenceRoom() {
         resourceService.addConferenceRoom("Conference Room One");
         ConferenceRoom room = resourceService.getConferenceRoom(1);
@@ -37,6 +40,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test updating workspace")
     public void testUpdateWorkspace() {
         resourceService.addWorkspace("Workspace One");
         resourceService.updateWorkspace(1, "Updated Workspace One");
@@ -47,6 +51,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test updating conference room")
     public void testUpdateConferenceRoom() {
         resourceService.addConferenceRoom("Conference Room One");
         resourceService.updateConferenceRoom(1, "Updated Conference Room One");
@@ -57,6 +62,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test deleting workspace")
     public void testDeleteWorkspace() {
         resourceService.addWorkspace("Workspace One");
         resourceService.deleteWorkspace(1);
@@ -66,6 +72,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test deleting conference room")
     public void testDeleteConferenceRoom() {
         resourceService.addConferenceRoom("Conference Room One");
         resourceService.deleteConferenceRoom(1);
@@ -75,6 +82,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test getting workspaces")
     public void testGetAllWorkspaces() {
         resourceService.addWorkspace("Workspace One");
         resourceService.addWorkspace("Workspace Two");
@@ -83,6 +91,7 @@ public class ResourceServiceTest {
     }
 
     @Test
+    @DisplayName("Test getting conference rooms")
     public void testGetAllConferenceRooms() {
         resourceService.addConferenceRoom("Conference Room One");
         resourceService.addConferenceRoom("Conference Room Two");
